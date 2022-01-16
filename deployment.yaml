@@ -1,10 +1,10 @@
-apiVersion: apps/v1.21
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
     app.kubernetes.io/name: cicd-demo
     app.kubernetes.io/instance: 
-    app.kubernetes.io/version: '1.21'
+    app.kubernetes.io/version: '1.0.0'
     app.kubernetes.io/managed-by: kubectl
   name: 
 spec:
