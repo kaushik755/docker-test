@@ -1,25 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app.kubernetes.io/name: cicd-demo
-    app.kubernetes.io/instance: 
-    app.kubernetes.io/version: '1.0.0'
-    app.kubernetes.io/managed-by: kubectl
   name: cicd-demo
+  namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cicd-demo
+      app: web
   template:
     metadata:
       labels:
-        app: cicd-demo
+        app: web
     spec:
       containers:
         - image: 085210251746.dkr.ecr.us-east-1.amazonaws.com/dockerimg:latest
           imagePullPolicy: Always
-          name: cicd-demo
+          name: dockerimg
           ports:
             - containerPort: 3000
