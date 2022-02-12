@@ -14,7 +14,7 @@ spec:
         app: web
     spec:
       containers:
-        - image: public.ecr.aws/u0m9v3a3/docker-image-1
+        - image: 085210251746.dkr.ecr.us-east-1.amazonaws.com/docker-image
           imagePullPolicy: Always
           name: dockerimg
           ports:
